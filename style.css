@@ -80,8 +80,8 @@ body {
 	padding: 60px 0;
 }
 .file-upload-image {
-	max-height: 600px;
-	max-width: 600px;
+	max-height: 400px;
+	max-width: 400px;
 	margin: auto;
 	padding: 20px;
 }
@@ -149,7 +149,7 @@ body {
 	padding-right: 5%;
 }
 .upload {
-	width: 10%;
+	width: 20%;
 }
 .drag-text {
 	font-size: 2rem;
