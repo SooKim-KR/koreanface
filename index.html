@@ -20,6 +20,142 @@
 			type="text/javascript"
 			src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60ae71bcdd234090"
 		></script>
+		<style type="text/css">
+			span {
+				display: block;
+				margin: 0 auto;
+			}
+
+			span[class*='l-'] {
+				height: 4px;
+				width: 4px;
+				background: #000;
+				display: inline-block;
+				margin: 12px 2px;
+
+				border-radius: 100%;
+				-webkit-border-radius: 100%;
+				-moz-border-radius: 100%;
+
+				-webkit-animation: loader 4s infinite;
+				-webkit-animation-timing-function: cubic-bezier(0.03, 0.615, 0.995, 0.415);
+				-webkit-animation-fill-mode: both;
+				-moz-animation: loader 4s infinite;
+				-moz-animation-timing-function: cubic-bezier(0.03, 0.615, 0.995, 0.415);
+				-moz-animation-fill-mode: both;
+				-ms-animation: loader 4s infinite;
+				-ms-animation-timing-function: cubic-bezier(0.03, 0.615, 0.995, 0.415);
+				-ms-animation-fill-mode: both;
+				animation: loader 4s infinite;
+				animation-timing-function: cubic-bezier(0.03, 0.615, 0.995, 0.415);
+				animation-fill-mode: both;
+			}
+
+			span.l-1 {
+				-webkit-animation-delay: 1s;
+				animation-delay: 1s;
+				-ms-animation-delay: 1s;
+				-moz-animation-delay: 1s;
+			}
+			span.l-2 {
+				-webkit-animation-delay: 0.8s;
+				animation-delay: 0.8s;
+				-ms-animation-delay: 0.8s;
+				-moz-animation-delay: 0.8s;
+			}
+			span.l-3 {
+				-webkit-animation-delay: 0.6s;
+				animation-delay: 0.6s;
+				-ms-animation-delay: 0.6s;
+				-moz-animation-delay: 0.6s;
+			}
+			span.l-4 {
+				-webkit-animation-delay: 0.4s;
+				animation-delay: 0.4s;
+				-ms-animation-delay: 0.4s;
+				-moz-animation-delay: 0.4s;
+			}
+			span.l-5 {
+				-webkit-animation-delay: 0.2s;
+				animation-delay: 0.2s;
+				-ms-animation-delay: 0.2s;
+				-moz-animation-delay: 0.2s;
+			}
+			span.l-6 {
+				-webkit-animation-delay: 0;
+				animation-delay: 0s;
+				-ms-animation-delay: 0;
+				-moz-animation-delay: 0;
+			}
+
+			@-webkit-keyframes loader {
+				0% {
+					-webkit-transform: translateX(-30px);
+					opacity: 0;
+				}
+				25% {
+					opacity: 1;
+				}
+				50% {
+					-webkit-transform: translateX(30px);
+					opacity: 0;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+
+			@-moz-keyframes loader {
+				0% {
+					-moz-transform: translateX(-30px);
+					opacity: 0;
+				}
+				25% {
+					opacity: 1;
+				}
+				50% {
+					-moz-transform: translateX(30px);
+					opacity: 0;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+
+			@-keyframes loader {
+				0% {
+					-transform: translateX(-30px);
+					opacity: 0;
+				}
+				25% {
+					opacity: 1;
+				}
+				50% {
+					-transform: translateX(30px);
+					opacity: 0;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+
+			@-ms-keyframes loader {
+				0% {
+					-ms-transform: translateX(-30px);
+					opacity: 0;
+				}
+				25% {
+					opacity: 1;
+				}
+				50% {
+					-ms-transform: translateX(30px);
+					opacity: 0;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+		</style>
 	</head>
 	<body style="background-color: #c0ffcf;">
 		<nav class="navbar navbar-expand-lg navbar-light van-distance">
@@ -91,22 +227,22 @@
 		<!-- Go to www.addthis.com/dashboard to customize your tools -->
 		<div class="addthis_inline_share_toolbox_srx9 d-flex justify-content-center"></div>
 		<!-- <div class="container file-upload"> 박스2 !-->
-			<!-- <div class="image-upload-wrap" style="display: none;"> !-->
-			<div class="image-upload-wrap">
-				<input
-					class="file-upload-input"
-					type="file"
-					onchange="readURL(this);"
-					accept="image/*"
-				/>
-				<div class="drag-text">
-					<img src="upload.png" class="mt-5 upload" />
-					<h3 class="upload-text">사진을 올려 주세요</h3>
-				</div>
+		<!-- <div class="image-upload-wrap" style="display: none;"> !-->
+		<div class="image-upload-wrap">
+			<input
+				class="file-upload-input"
+				type="file"
+				onchange="readURL(this);"
+				accept="image/*"
+			/>
+			<div class="drag-text">
+				<img src="upload.png" class="mt-5 upload" />
+				<h3 class="upload-text">사진을 올려 주세요</h3>
 			</div>
-			<div class="file-upload-content">
-				<img class="file-upload-image" id="face-image" src="#" alt="your image" />
-				<!--  <div id="loading" class="animated bounce">
+		</div>
+		<div class="file-upload-content">
+			<img class="file-upload-image" id="face-image" src="#" alt="your image" />
+			<!--  <div id="loading" class="animated bounce">
                 <div class="spinner-border" role="status">
                     <span class="sr-only">Loading...</span>
                 </div>
@@ -114,14 +250,20 @@
             </div>
             <p class="result-message"></p>
 -->
-				<div id="label-container"></div>
-				<a href="https://www.google.com" target="_blank"><div id="label-container"></div></a>
-				<div class="image-title-wrap">
-					<button type="button" onclick="removeUpload()" class="remove-image">
-						다른 사진으로 재시도
-					</button>
-				</div>
+			<span class="ai-working">열심히 분석중 입니다.</span>
+			<span class="l-1"></span>
+			<span class="l-2"></span>
+			<span class="l-3"></span>
+			<span class="l-4"></span>
+			<span class="l-5"></span>
+			<span class="l-6"></span>
+			<div id="label-container" style="font-size: 30px; padding-bottom: 2%;"></div>
+			<div class="image-title-wrap">
+			<button type="button" onclick="removeUpload()" class="remove-image">
+					다른 사진으로 재시도
+				</button>
 			</div>
+		</div>
 		<!-- </div> 박스2 !-->
 		<div id="webcam-container"></div>
 		<div id="disqus_thread"></div>

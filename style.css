@@ -105,6 +105,7 @@ body {
 	color: #ffffff;
 	transition: all 0.2s ease;
 	cursor: pointer;
+	font-size: 15px;
 }
 .remove-image:active {
 	border: 0;
@@ -166,6 +167,12 @@ body {
 .addthis_inline_share_toolbox_srx9 {
 	padding-bottom: 2%;	
 } 
+
+.ai-working {
+	font-size: 15px;	
+} 
+
+
 @media screen and (max-width: 600px) {
 	html {
 		font-size: 10px;
